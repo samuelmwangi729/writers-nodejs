@@ -1,4 +1,22 @@
 const BlogCategory = require('../Models/BlogCategories')
+const userModel = require('../Models/User')
+const bcrypt = require('bcrypt')
+const handleError = e=>{
+    let error = {email:'',password:''}
+
+    //check if the email is a duplicate with a specific error code
+    if(e.code===11000){
+        error.email = 'Kindly use a different email address'
+    }
+    //check if a phrase is included in the error message 
+    if(e.message.includes('user validation failed')){
+        Object.values(e.errors).forEach(({properties})=>{
+            //updating the error object with the relevant message
+           error[properties.path] = properties.message;
+        })
+    }
+    return error
+}
 let title = ''
 const Index = (req,res)=>{
     title = 'HomePage'
@@ -30,6 +48,41 @@ const Login = (req,res)=>{
     res.render('pages/Login.ejs',{title:'Login Your Account'})
 }
 const Register = (req,res)=>{
+    console.log(req.body)
     res.render('pages/Register.ejs',{title:'Register Your Account'})
 }
-module.exports = {Index,About,Pricing,Portfolio,FAQ,Blog,Contact,Reset,Login,Register}
+const RegisterData = async (req,res)=>{
+    // res.send(req.body)
+    const firstName = req.body.firstName
+    const lastName = req.body.lastName
+    const username = req.body.username
+    const email = req.body.email
+    const reason = req.body.reason
+    const ppassword = req.body.password
+    const confirmPassword = req.body.confirmPassword
+    // if(!reason.includes('work') || !reason.includes('assignment')){
+    //     res.json({
+    //         message:'invalid data submitted'
+    //     })
+    // }
+    if(ppassword === confirmPassword){
+        try{
+            const user = await userModel.create({
+                firstName:firstName,
+                lastName:lastName,
+                username:username,
+                email:email,
+                regReason:reason,
+                password:ppassword
+            })
+            res.status(201).json(user)
+        }catch(e){
+            res.json(handleError(e))
+        }
+    }else{
+        res.json({
+            message:'The password do not match'
+        })
+    }
+}
+module.exports = {Index,About,Pricing,Portfolio,FAQ,Blog,Contact,Reset,Login,Register,RegisterData}

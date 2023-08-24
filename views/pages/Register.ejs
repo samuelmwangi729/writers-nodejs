@@ -38,51 +38,20 @@
     <!--page banner end-->
     <div class="container text-center">
         <div class="row">
-            <div class="col-sm-4 offset-sm-4" style="padding: 20px;">
+            <div class="col-sm-4 offset-sm-4 mt-5 mb-5 p-2">
                 <h2 class="text-center">
                     Register Your Account
                 </h2>
-                <form action="#" class="mb-5">
-                    <fieldset >
-                        <div class="input-gruoup">
-                            <label for="Username" class="label-control">Username</label>
-                            <input type="text" name="Username" placeholder="Enter your Username Here" id="" class="form-control" 
-                            style="background-color: white !important;border: 1px solid black; border-radius: 0px !important">
-                        </div>
-                        <div class="input-gruoup">
-                            <label for="Username" class="label-control">Password</label>
-                            <input type="password" name="Password" placeholder="Enter your Password Here" id="" class="form-control" 
-                            style="background-color: white !important;border: 1px solid black; border-radius: 0px !important">
-                        </div>
-                        <div class="input-gruoup">
-                            <label for="Username" class="label-control">Confirm Password</label>
-                            <input type="password" name="Password" placeholder="Enter your Password Confirmation Here" id="" class="form-control" 
-                            style="background-color: white !important;border: 1px solid black; border-radius: 0px !important">
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <button class="btn btn-primary btn-block text-center mt-2" style="width: 100%;">Create Account</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <span>
-                                <a href="/Reset">Reset Your Password? </a>
-                            </span>
-                        </div>
-                        <div class="col-sm-6">
-                            <span>
-                                <a href="/Login">
-                                    Login Your Account
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </form>
+                <%- include('./RegisterForm.ejs')%>
             </div>
         </div>
     </div>
+    <script>
+        const username = document.querySelector('input#username')
+        username.addEventListener('change',(e)=>{
+            alert(e.target.value)
+        })
+    </script>
     <!--footer area start-->
     <%- include('footer.ejs') %>
 </body>
