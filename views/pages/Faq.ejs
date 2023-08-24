@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<%- include('head.ejs') %>
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+    <div class="se-pre-con"></div>
+    <%- include('navbar.ejs')%>
+     <!--page banner start-->
+     <div class="page-banner-brd">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-brd-text text-center">
+                        <h1>Faq</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Faq</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->
+        <span class="banner-frame-one"></span>
+        <span class="banner-frame-two"></span>
+        <span class="banner-frame-three"></span>
+        <span class="banner-frame-four"></span>
+        <div class="shape-top-left" data-aos="fade-right" data-aos-delay="500"></div>
+        <div class="shape-bottom-right" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="1500"></div>
+    </div>
+    <!--page banner end-->
+
+    <!--faq v2 start-->
+    <section class="faq-v2 px-120">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="left-content-faq_v2">
+                        <div class="sec-title v2 mb-50">
+                            <h3><img src="img/icons/title-icon.svg" alt=""> Common Questions</h3>
+                            <h1>Frequently Asked Questions</h1>
+                        </div>
+                        <div class="faq-tabs-img">
+                            <div class="d-md-flex justify-content-between">
+                                <div class="f-img order-md-2 text-center">
+                                    <img src="img/home2/faq-img.png" data-aos="fade-up" alt="">
+                                </div>
+                                <ul class="nav nav-tabs mt-4 mt-md-0" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#genAsk_id" type="button" role="tab" aria-controls="genAsk_id" aria-selected="true">
+                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M38 14.9433C37.9059 17.9097 37.2472 20.4681 35.8357 22.791C35.5533 23.2619 35.522 23.67 35.7102 24.1879C36.2277 25.5534 36.7139 26.9346 37.2001 28.3159C37.2942 28.5984 37.4668 28.9123 37.2001 29.1948C36.9021 29.5087 36.5728 29.3675 36.2591 29.2576C34.8476 28.771 33.4517 28.2845 32.0559 27.7665C31.6324 27.6096 31.3031 27.6723 30.8796 27.8607C29.4995 28.4571 28.6996 29.5087 27.8997 30.7801C24.8728 35.6143 20.4029 38 14.7098 38C12.0592 38 9.54985 37.2309 7.29141 35.8183C6.77385 35.4887 6.31902 35.4416 5.75441 35.6614C4.46835 36.1636 3.15092 36.6031 1.84918 37.0583C1.51982 37.1681 1.1591 37.4036 0.814059 37.0897C0.453335 36.7601 0.704274 36.3991 0.814059 36.0695C1.30025 34.6882 1.78645 33.307 2.30401 31.9415C2.47653 31.4864 2.42948 31.1254 2.17854 30.6859C-2.33835 22.948 0.390601 13.5463 8.31085 9.43412C8.82841 9.16729 9.14208 8.7906 9.4087 8.28834C12.3259 2.92047 16.8584 0.0795748 22.928 0.00109709C30.613 -0.0930762 37.0903 5.88693 37.8588 13.5463C37.9216 14.0957 37.9686 14.645 38 14.9433ZM15.0705 36.8856C15.6978 36.8542 16.3252 36.8856 16.9525 36.7914C24.763 35.6771 30.0484 28.5984 28.9505 20.782C27.7429 12.1808 18.4582 6.65601 10.3027 9.71664C1.84918 12.8871 -1.50712 22.6655 3.24503 30.3563C3.60575 30.937 3.63712 31.4236 3.38618 32.0357C2.9784 33.0559 2.63336 34.0918 2.27264 35.1277C2.22559 35.2847 2.06875 35.473 2.24127 35.63C2.41379 35.7869 2.58631 35.63 2.75883 35.5672C3.79395 35.2062 4.84476 34.8609 5.84851 34.4528C6.42881 34.2174 6.89932 34.2488 7.44824 34.6098C9.73806 36.1636 12.2945 36.917 15.0705 36.8856Z" fill="#3661FC"/>
+                                        <path d="M12.8121 24.9256C12.8121 24.6117 12.8121 24.2978 12.8121 23.9838C12.8121 22.3201 13.2042 21.8649 14.8667 21.6295C16.6703 21.3784 17.4859 19.4635 16.435 18.0352C15.3842 16.6226 13.314 16.9208 12.4828 18.616C12.0123 19.6048 11.3065 20.06 10.4753 19.9187C9.25193 19.7147 8.64027 18.6003 9.06373 17.376C9.87928 15.006 12.4828 13.2952 15.0078 13.4835C17.7211 13.6876 19.9796 15.6966 20.4344 18.3334C20.8892 20.9703 19.6345 23.4973 17.2035 24.7058C16.6546 24.9727 16.435 25.3023 16.4664 25.9144C16.4978 26.762 16.3096 27.531 15.494 28.0019C14.3334 28.6454 12.9533 27.9234 12.8278 26.5893C12.7808 26.0243 12.8278 25.4592 12.8121 24.9256Z" fill="#3661FC"/>
+                                        <path d="M14.5843 28.9908C15.6351 28.9751 16.4977 29.8384 16.482 30.8586C16.4663 31.8631 15.6351 32.6793 14.6157 32.6793C13.6119 32.6793 12.7964 31.8631 12.7964 30.8429C12.7807 29.8227 13.5649 29.0065 14.5843 28.9908Z" fill="#3661FC"/>
+                                        <path d="M2.99403 19.9659C3.60569 17.5017 4.8447 15.3985 6.7581 13.6876C6.99336 13.4836 7.27566 13.3894 7.5266 13.6563C7.80891 13.9545 7.68344 14.237 7.44818 14.4724C5.77003 16.042 4.62513 17.9411 4.04483 20.1699C3.96641 20.4838 3.77821 20.7663 3.37043 20.6565C3.04108 20.5623 2.94697 20.2955 2.99403 19.9659Z" fill="#3661FC"/>
+                                        </svg>General Questions</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#community_id" type="button" role="tab" aria-controls="community_id" aria-selected="false">
+                                        <svg width="34" height="38" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0924 3.18459C20.0924 3.37695 20.1516 3.6137 20.0776 3.77646C19.6333 4.69386 20.1516 5.15255 20.8031 5.70003C21.7656 6.48426 22.3135 7.57921 22.506 8.80734C22.58 9.28083 22.7281 9.414 23.2316 9.22165C24.6235 8.68897 26.045 8.74815 27.4073 9.36961C27.8811 9.59157 28.1328 9.48799 28.4734 9.13287C29.3915 8.20068 30.502 7.74198 31.8347 8.12669C33.0193 8.46702 33.6708 9.29563 33.9374 10.4794C34.2779 12.033 33.0785 13.7494 31.3164 14.1194C30.813 14.2229 30.6353 14.3709 30.5909 14.9036C30.4724 16.398 29.8061 17.641 28.6511 18.6028C28.2513 18.9431 28.2809 19.1058 28.6659 19.4314C29.8357 20.4079 30.502 21.6805 30.6057 23.2045C30.6353 23.678 30.813 23.7964 31.2572 23.8852C33.0193 24.2403 34.2631 25.9271 33.9522 27.466C33.7152 28.6349 33.0785 29.4931 31.8939 29.863C30.6353 30.2626 29.5099 29.9074 28.6363 29.0196C28.118 28.4869 27.7478 28.5017 27.1259 28.7533C25.8821 29.2712 24.579 29.286 23.2908 28.8125C22.8169 28.6349 22.5948 28.6497 22.506 29.212C22.2543 30.7213 21.4695 31.9198 20.2256 32.7928C19.8851 33.0295 19.7962 33.2515 19.9295 33.651C20.1812 34.4204 20.1812 35.2046 19.9147 35.9741C19.4409 37.365 18.1082 38.164 16.5978 37.9716C15.2651 37.7941 14.1546 36.5807 14.0806 35.1751C14.0509 34.6572 14.0213 34.1245 14.2286 33.6362C14.3915 33.2367 14.2582 33.0147 13.9325 32.778C12.6887 31.8902 11.9187 30.6917 11.6669 29.1824C11.5781 28.6941 11.43 28.5905 10.9414 28.7829C9.56428 29.3008 8.17238 29.2564 6.83971 28.6645C6.36587 28.4574 6.08453 28.4574 5.69953 28.8717C5.00358 29.6263 4.12994 30.0406 3.06381 29.9962C1.83479 29.937 0.798265 29.1824 0.383656 28.0135C-0.0309528 26.8741 0.294811 25.5424 1.18326 24.773C1.71633 24.3143 2.30863 23.9444 3.00458 23.8556C3.40438 23.8112 3.53764 23.6484 3.56726 23.2489C3.67091 21.6953 4.32244 20.408 5.52184 19.4018C5.92164 19.0615 5.89203 18.8987 5.50704 18.5732C4.32244 17.5818 3.6561 16.2797 3.56726 14.726C3.53764 14.3265 3.37476 14.2081 2.98977 14.1342C1.19807 13.7642 -0.0605677 12.1218 0.250389 10.5238C0.472501 9.34002 1.13884 8.49661 2.30863 8.12669C3.56726 7.72718 4.69263 8.0675 5.56627 8.9701C6.08453 9.48799 6.45471 9.48799 7.07663 9.23644C8.32045 8.71856 9.62351 8.70376 10.8969 9.17726C11.356 9.35482 11.5929 9.35482 11.6817 8.77775C11.9335 7.26848 12.7183 6.06995 13.9621 5.19695C14.3027 4.9602 14.4063 4.72345 14.2582 4.33874C14.0213 3.70248 14.0361 3.02183 14.1694 2.37078C14.51 0.802327 15.8723 -0.144662 17.5159 0.0181014C19.0114 0.151272 20.1072 1.49777 20.0924 3.18459ZM17.0865 28.1614C22.2395 28.1614 26.2819 24.1367 26.2671 18.9727C26.2671 13.853 22.2543 9.82831 17.1309 9.81352C11.9631 9.79872 7.92065 13.8086 7.90584 18.9579C7.90584 24.1219 11.9335 28.1614 17.0865 28.1614ZM27.8219 20.8666C27.3036 23.4709 26.0746 25.5276 24.1496 27.2736C25.349 27.6435 26.4892 27.54 27.2296 26.7705C27.9848 25.9715 28.5771 24.8913 28.888 23.8408C29.2138 22.8198 28.7251 21.784 27.8219 20.8666ZM15.7982 6.11434C14.7469 6.48426 14.0361 7.1797 13.5771 8.17108C13.5179 8.30425 13.4142 8.45222 13.5179 8.58539C13.6363 8.73336 13.7992 8.62978 13.9325 8.58539C14.9838 8.28946 16.0499 8.12669 17.1457 8.12669C18.2118 8.12669 19.2484 8.30425 20.2849 8.58539C20.4626 8.62978 20.7587 8.82214 20.7143 8.36344C20.6254 7.57921 19.1299 6.06995 18.4191 6.17353C17.5307 6.33629 16.6719 6.49906 15.7982 6.11434ZM24.194 10.6717C24.6827 11.2044 25.1269 11.6483 25.5267 12.1366C26.5632 13.3943 27.2592 14.8148 27.6738 16.398C27.7182 16.5904 27.6442 17.1083 28.118 16.768C29.0213 16.1169 29.2286 14.1046 28.4882 13.2907C28.1476 12.9208 27.8515 12.5065 27.7626 12.0182C27.6442 11.3672 27.2444 11.0416 26.6817 10.8197C25.9117 10.5238 25.1269 10.361 24.194 10.6717ZM18.4191 31.8606C19.4409 31.5055 20.1516 30.8248 20.6106 29.8778C20.6847 29.7299 20.8179 29.5523 20.6995 29.4043C20.5662 29.2268 20.3737 29.3748 20.2256 29.4191C19.2039 29.7151 18.1674 29.863 17.0865 29.863C16.0203 29.863 14.9838 29.6855 13.9473 29.4043C13.7696 29.36 13.4734 29.1528 13.5031 29.6115C13.5771 30.3809 15.0875 31.905 15.7982 31.8014C16.6867 31.6386 17.5455 31.4759 18.4191 31.8606ZM10.0233 10.6717C8.12796 10.213 7.0174 10.7457 6.33625 12.3585C6.2326 12.6101 6.08453 12.8468 5.92164 13.054C5.07762 14.1489 5.06281 15.4511 5.89203 16.5312C5.99568 16.6644 6.14376 16.8567 6.26222 16.8567C6.49914 16.8567 6.48433 16.5756 6.52875 16.398C6.85451 15.0663 7.4172 13.853 8.20199 12.7285C8.72025 12.0034 9.35697 11.382 10.0233 10.6717ZM10.0233 27.3032C9.56428 26.8149 9.14967 26.4006 8.76468 25.9567C7.68373 24.6694 6.94336 23.2193 6.52875 21.5917C6.48433 21.4141 6.57317 20.8814 6.08453 21.2366C5.18127 21.9024 4.98877 23.8852 5.72915 24.7138C6.06972 25.0837 6.35106 25.498 6.4399 25.9863C6.55836 26.6374 6.95817 26.9629 7.52085 27.17C8.32045 27.4512 9.09044 27.6139 10.0233 27.3032ZM4.91474 11.1896C4.92954 10.3906 4.14475 9.68035 3.22669 9.66555C2.4567 9.66555 1.90882 10.1834 1.89402 10.9529C1.87921 11.7223 2.70843 12.5361 3.53764 12.5509C4.27802 12.5657 4.89993 11.9442 4.91474 11.1896ZM30.9611 9.66555C30.043 9.68035 29.273 10.4054 29.3026 11.2044C29.3322 11.959 29.969 12.5805 30.6945 12.5361C31.5385 12.4917 32.353 11.6927 32.3233 10.9085C32.2937 10.1686 31.731 9.65075 30.9611 9.66555ZM3.19707 28.2946C4.10033 28.3094 4.91474 27.6139 4.91474 26.8149C4.91474 26.0603 4.32244 25.424 3.58207 25.424C2.76766 25.4092 1.89402 26.2231 1.89402 26.9925C1.89402 27.7471 2.44189 28.2946 3.19707 28.2946ZM30.9907 28.2946C31.7607 28.2946 32.3085 27.7619 32.3085 27.0073C32.3233 26.2379 31.4793 25.424 30.6501 25.424C29.9097 25.4092 29.2878 26.0307 29.2878 26.8001C29.2878 27.5991 30.0874 28.3094 30.9907 28.2946ZM15.7834 3.1402C15.7834 4.11679 16.3017 4.73825 17.1309 4.72345C17.9305 4.70865 18.4339 4.10199 18.4339 3.1698C18.4339 2.23761 17.9157 1.61614 17.1309 1.60135C16.3313 1.60135 15.7834 2.22281 15.7834 3.1402ZM18.4339 34.7903C18.4339 33.8434 17.9157 33.2515 17.1309 33.2367C16.3017 33.2219 15.7834 33.8434 15.7982 34.8347C15.813 35.7521 16.3609 36.3736 17.1457 36.3588C17.9157 36.344 18.4339 35.7225 18.4339 34.7903Z" fill="#3661FC"/>
+                                        <path d="M14.8357 15.3771C15.4725 15.3475 16.0796 15.4955 16.5978 15.8654C16.9828 16.1466 17.279 16.0874 17.664 15.8506C19.1299 14.9776 20.9068 15.318 21.9285 16.6053C22.965 17.9222 22.8762 19.683 21.6768 20.9111C20.5958 22.0209 19.5001 23.1158 18.3747 24.2108C17.5603 24.995 16.6867 25.0098 15.8871 24.2404C14.7321 23.1306 13.5919 22.0061 12.4962 20.8371C11.5485 19.8309 11.3264 18.6176 11.8742 17.3451C12.4221 16.0726 13.4438 15.4215 14.8357 15.3771Z" fill="#3661FC"/>
+                                        </svg> Community</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#support_id" type="button" role="tab" aria-controls="support_id" aria-selected="false">
+                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.2879 0C29.4225 0 36.2999 6.20701 37.2168 14.4279C37.5274 17.2383 37.1725 19.9736 36.0632 22.5737C35.7822 23.2199 35.7822 23.791 36.0188 24.4373C36.6252 26.1205 37.1725 27.8489 37.7641 29.5472C38.1338 30.6443 38.1338 31.6663 37.2908 32.553C36.4182 33.4547 35.3829 33.4848 34.2884 33.094C32.4988 32.4628 30.6944 31.8466 28.9048 31.2154C28.5203 31.0801 28.1653 31.0501 27.766 31.2304C26.0355 31.9969 24.2459 32.5079 22.3528 32.583C21.8647 32.5981 21.5542 32.8686 21.2436 33.2143C18.7884 36.0848 15.6973 37.5577 11.9406 37.4975C10.6095 37.4825 9.29319 37.227 8.05083 36.686C7.4888 36.4455 6.97115 36.4305 6.40913 36.6409C5.29987 37.0617 4.17583 37.4374 3.05178 37.8282C2.17917 38.1288 1.33614 38.0686 0.641002 37.3773C-0.0837111 36.6559 -0.128081 35.7842 0.18251 34.8675C0.567052 33.7102 0.951594 32.5379 1.36572 31.3957C1.5432 30.8998 1.51362 30.4339 1.33614 29.9379C-0.497833 25.0685 0.714953 20.0488 4.56037 16.562C4.91533 16.2464 5.18155 15.9308 5.21113 15.3747C5.58088 9.54346 8.31705 5.12491 13.2273 2.14916C15.86 0.556076 18.3003 0 21.2879 0ZM34.8652 16.0511C34.8504 15.7054 34.8504 15.0892 34.7765 14.5031C33.7412 6.74805 26.7603 1.45782 19.099 2.63009C11.8075 3.74224 6.17249 10.8961 7.9325 19.2222C9.81084 28.0893 19.2173 32.6582 27.2631 28.7356C27.8695 28.435 28.402 28.405 29.0379 28.6304C30.8867 29.3067 32.765 29.9379 34.6286 30.5842C34.8948 30.6743 35.2054 30.9599 35.442 30.6894C35.6639 30.4339 35.3977 30.1183 35.3089 29.8477C34.7025 28.0142 34.1109 26.1957 33.4602 24.3772C33.1791 23.6107 33.2087 22.9644 33.5785 22.228C34.4807 20.3794 34.8948 18.3806 34.8652 16.0511ZM2.59329 35.3784C3.85045 34.9426 4.93012 34.642 5.93585 34.2062C6.8972 33.8004 7.72544 33.8455 8.6868 34.2813C11.9258 35.7692 16.2593 34.9426 18.5074 32.4778C11.4821 30.8246 7.08947 26.4512 5.35903 19.3124C5.24071 19.4025 5.18155 19.4326 5.12239 19.4927C5.00407 19.628 4.88575 19.7482 4.78222 19.8985C2.71161 22.8442 2.32707 26.0153 3.71734 29.3518C4.0723 30.1934 4.13146 30.9449 3.79129 31.8015C3.37716 32.8836 3.05178 34.0409 2.59329 35.3784Z" fill="#3661FC"/>
+                                        <path d="M2.5 21L6 17.5L6.5 19L7.5 21L8.5 23L9.5 25L11.5 28C12.5 28.5 14.6 29.5 15 29.5C15.4 29.5 16.8333 30.5 17.5 31L20 32C19.8333 32.5 19.4 33.6 19 34C18.6 34.4 17.5 34.8333 17 35C16.5 35.1667 15.3 35.5 14.5 35.5C13.5 35.5 11 36 10.5 36C10.1 36 9 35.6667 8.5 35.5L6.5 35L5 36C4.16667 36.1667 2.4 36.5 2 36.5C1.6 36.5 1.5 35.8333 1.5 35.5L2 33L2.5 31L2 28L2.5 25.5V21Z" fill="#3661FC"/>
+                                        <path d="M21.3029 14.8788C23.4178 14.8788 25.5328 14.8788 27.6478 14.8788C28.6387 14.8788 29.112 15.2696 29.1268 16.0511C29.1416 16.8326 28.6387 17.3285 27.7218 17.3285C23.4178 17.3436 19.1139 17.3436 14.81 17.3285C13.8782 17.3285 13.3606 16.8326 13.3606 16.0811C13.3606 15.2996 13.893 14.8788 14.884 14.8638C17.0137 14.8788 19.1583 14.8788 21.3029 14.8788Z" fill="#3661FC"/>
+                                        <path d="M21.2585 12.5793C19.1139 12.5793 16.9694 12.5793 14.8248 12.5793C13.8782 12.5793 13.3606 12.1435 13.3606 11.377C13.3606 10.6255 13.8782 10.1296 14.81 10.1145C19.0991 10.0995 23.3883 10.0995 27.6774 10.1145C27.8253 10.1145 27.9732 10.1446 28.1211 10.1747C28.831 10.34 29.2008 10.8359 29.1268 11.5122C29.0676 12.1585 28.6387 12.5643 27.914 12.5643C25.6955 12.5943 23.477 12.5793 21.2585 12.5793Z" fill="#3661FC"/>
+                                        <path d="M18.6259 22.0327C17.3687 22.0327 16.1115 22.0477 14.8692 22.0327C13.893 22.0177 13.3606 21.5668 13.3606 20.7853C13.3606 20.0338 13.893 19.5679 14.8248 19.5529C17.4131 19.5379 19.9865 19.5379 22.5748 19.5529C23.4474 19.5529 23.9503 20.0188 23.9651 20.7703C23.9799 21.5217 23.477 22.0177 22.6192 22.0177C21.2733 22.0477 19.9422 22.0327 18.6259 22.0327Z" fill="#3661FC"/>
+                                        </svg> Support</button>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+
+                        </div>
+                    </div><!--/.left-content-faq_v2-->
+                </div>
+                <div class="col-lg-6">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="genAsk_id" role="tabpanel" aria-labelledby="genAsk_id">
+                            <div class="accordion" id="Gen_accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Is it Full Digital Marketing Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#Gen_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            How to Create my Project in Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#Gen_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            How to Work in Process of Digital Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#Gen_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            How to join your referral program?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#Gen_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="community_id" role="tabpanel" aria-labelledby="community_id">
+                            <div class="accordion" id="com_accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                            Is it Full Digital Marketing Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1" data-bs-parent="#com_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo1">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                                            How to Create my Project in Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo1" data-bs-parent="#com_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree1">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                            How to Work in Process of Digital Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#com_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour1">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">
+                                            How to join your referral program?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour1" class="accordion-collapse collapse" aria-labelledby="headingFour1" data-bs-parent="#com_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="support_id" role="tabpanel" aria-labelledby="support_id">
+                            <div class="accordion" id="sup_accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne2">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                            Is it Full Digital Marketing Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne2" class="accordion-collapse collapse show" aria-labelledby="headingOne2" data-bs-parent="#sup_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                                            How to Create my Project in Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#sup_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                                            How to Work in Process of Digital Agency?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree2" data-bs-parent="#sup_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
+                                            How to join your referral program?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour2" class="accordion-collapse collapse" aria-labelledby="headingFour2" data-bs-parent="#sup_accordion">
+                                        <div class="accordion-body">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at its layout. The point of using Lorem Ipsuim is that it has as more less or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--/.container-->
+    </section>
+    <!--faq v2 end-->
+
+    <!--ask question start-->
+    <section class="ask-question-sec px-120">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-12">
+                    <div class="team-personal-contact ask ">
+                        <div class="row gy-5">
+                            <div class="col-md-6">
+                                <img src="img/faq-que.jpg" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="left-frm">
+                                    <h1>Ask any Question</h1>
+                                    <p>Sed primis eu conubia erat ut nam vitae a habitant dui adipiscing as dignissim eu a ad venenatis.</p>
+                                    <form>
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="Your Name" class="form-control">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="email" placeholder="Email Address" class="form-control">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <textarea rows="6" class="form-control" placeholder="your Message"></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-default">Send Message</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div><!--/.team-personal-contact-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ask question end-->
+    <!--footer area start-->
+    <%- include('footer.ejs') %>
+</body>
+</html>
