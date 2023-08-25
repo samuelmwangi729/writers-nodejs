@@ -104,7 +104,10 @@
                 }
             })
             const dataBack = await res.json()
-            console.log(dataBack)
+            if(dataBack.user.error){
+                emailError.textContent=dataBack.user.error
+            }
+            console.log(dataBack.user)
         })
     </script>
     <!--footer area start-->

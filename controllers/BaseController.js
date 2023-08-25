@@ -1,6 +1,8 @@
 const BlogCategory = require('../Models/BlogCategories')
 const userModel = require('../Models/User')
 const bcrypt = require('bcrypt')
+const token = require('jsonwebtoken')
+const userJwt = require('../Models/usersjwt')
 const handleError = e=>{
     let error = {email:'',password:''}
 
@@ -48,21 +50,51 @@ const Login = (req,res)=>{
     res.render('pages/Login.ejs',{title:'Login Your Account'})
 }
 const Register = (req,res)=>{
-    console.log(req.body)
+    // console.log(req.body)
     res.render('pages/Register.ejs',{title:'Register Your Account'})
 }
+const tExpiry = 3*24*60*60
+const generateJwt = (uniqueKey)=>{
+    const jwtoken = token.sign({uniqueKey},'P!@#four5sam',{expiresIn:tExpiry})
+    return jwtoken
+}
+
 const LoginUser = async (req,res)=>{
     const {email,password} = req.body
-    console.log(email)
     //get the user from the database 
     //create a static method to log the user in 
     const login = await userModel.Login(email,password)
     if(login){
+        const splittedString = (login._id).toString().split("\"")
+        let userId=splittedString[0]
+        const userToken = generateJwt(userId)
+        //set a cookie with the token in it 
+        res.cookie('jwt',userToken,{
+            maxAge:tExpiry*1000,
+            httpOnly:true
+        })
+        res.cookie('userId',`Pro-${userId}-05`,{
+            maxAge:tExpiry*1000,
+            httpOnly:true
+        })
+        //save the jwt to the database together with its expiry date 
+        const expiryDate = getExpiryDate(3)
+        // console.log(expiryDate)
+        const dbStat = await userJwt.StoreJwt(userId,userToken,expiryDate)
+        if(dbStat){
+            // console.log('the jwt token saved to the database')
+        }else{
+            // console.log('there was an error saving to the database')
+        }
         //send the user back as json 
         res.status(201).json({user:login})
     }else{
-        res.status(404).json({error:'Invalid data submitted'})
+        res.status(404).json({error:'Invalid Credentials Submitted!!'})
     }
+}
+const getExpiryDate = d =>{
+    let expDate = new Date(new Date().setDate(new Date().getDate()+d))
+    return expDate
 }
 const RegisterData = async (req,res)=>{
     // res.send(req.body)
@@ -88,7 +120,7 @@ const RegisterData = async (req,res)=>{
                 regReason:reason,
                 password:ppassword
             })
-            res.status(201).json(user)
+            res.status(201).redirect('/Login')
         }catch(e){
             res.json(handleError(e))
         }
