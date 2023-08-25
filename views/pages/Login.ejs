@@ -42,13 +42,15 @@
                 <h2 class="text-center">
                     Login Your Account
                 </h2>
-                <form action="#" class="mb-5">
+                <form class="mb-5" id="loginForm">
                     <fieldset >
                         <div class="form-group mt-3">
-                            <input type="text" name="Username" placeholder="Enter your Username Here" id="" class="form-control" 
+                            <span class="email-error" style="color:crimson"></span>
+                            <input type="email" name="email" placeholder="Enter your Email Here" id="" class="form-control" 
                             style="background-color: white !important;border: 1px solid black; border-radius: 0px !important;height:30px !important">
                         </div>
-                        <div class="input-group mt-3">
+                        <div class="form-group mt-3">
+                            <span class="password-error" style="color:crimson"></span>
                             <input type="password" name="Password" placeholder="Enter your Password Here" id="" class="form-control" 
                             style="background-color: white !important;border: 1px solid black; border-radius: 0px !important;height:30px !important">
                         </div>
@@ -76,6 +78,35 @@
             </div>
         </div>
     </div>
+    <script>
+        const form = document.querySelector("form")
+        const emailError = document.querySelector(".email-error")
+        const passwordError = document.querySelector(".password-error")
+        form.addEventListener('submit',async (e)=>{
+            console.log('clicked')
+            e.preventDefault()
+            passwordError.textContent=""
+            emailError.textContent=""
+            const email = form.email.value
+            const password = form.Password.value
+            if(email==""){
+                emailError.textContent='Email Should Not be empty'
+            }
+            if(password==''){
+                passwordError.textContent='Password Should not be empty'
+            }
+            //post the form data 
+            const res = await fetch("/Login",{
+                method:'POST',
+                body:JSON.stringify({email,password}),
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+            const dataBack = await res.json()
+            console.log(dataBack)
+        })
+    </script>
     <!--footer area start-->
     <%- include('footer.ejs') %>
 </body>

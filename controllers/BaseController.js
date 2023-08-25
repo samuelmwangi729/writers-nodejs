@@ -51,6 +51,19 @@ const Register = (req,res)=>{
     console.log(req.body)
     res.render('pages/Register.ejs',{title:'Register Your Account'})
 }
+const LoginUser = async (req,res)=>{
+    const {email,password} = req.body
+    console.log(email)
+    //get the user from the database 
+    //create a static method to log the user in 
+    const login = await userModel.Login(email,password)
+    if(login){
+        //send the user back as json 
+        res.status(201).json({user:login})
+    }else{
+        res.status(404).json({error:'Invalid data submitted'})
+    }
+}
 const RegisterData = async (req,res)=>{
     // res.send(req.body)
     const firstName = req.body.firstName
@@ -85,4 +98,4 @@ const RegisterData = async (req,res)=>{
         })
     }
 }
-module.exports = {Index,About,Pricing,Portfolio,FAQ,Blog,Contact,Reset,Login,Register,RegisterData}
+module.exports = {Index,About,Pricing,Portfolio,FAQ,Blog,Contact,Reset,Login,Register,RegisterData,LoginUser}

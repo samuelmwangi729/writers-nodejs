@@ -35,6 +35,24 @@ const userSchema = mongoose.Schema({
         minlength:[8,'The minimum length is 8 characters']
     }
 })
+userSchema.statics.Login = async (email,password)=>{
+    const user = await userModel.findOne({email})
+    data={'error':'Invalid Data Submitted'}
+    if(user){
+        //now check the hashed password 
+        const isTrue=await bcrypt.compare(password,user.password)
+        if(isTrue){
+            //then generate the authentication token here
+            return user
+        }else{
+            return data
+        }
+    }
+    else{
+        return data
+    }
+    
+}
 userSchema.pre('save',async function(next){
     const salt = await bcrypt.genSalt()
     this.password = await bcrypt.hash(this.password,salt)
